@@ -1,0 +1,140 @@
+:root {
+  --dark-cyan:  hsl(185, 75%, 39%);
+  --very-dark-des-blue: hsl(229, 23%, 23%);
+  --dark-gray-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --font: "Kumbh Sans", Sans;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.main {
+  block-size: 100vh;
+  inline-size: 100vw;
+  font-family: var(--font);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-cyan);
+}
+
+.top,.bottom {
+  inline-size: 55%;
+  position: absolute;
+}
+
+.top {
+  inset-block-start: 0;
+  block-size: 60vh;
+  inset-inline-start: 0;
+  background:no-repeat url(./images/bg-pattern-top.svg);
+  background-position: right bottom;
+}
+
+.bottom {
+  inset-block-start: 40vh;
+  block-size: 60vh;
+  inset-inline-start: 50vw;
+  background:no-repeat url(./images/bg-pattern-bottom.svg);
+  background-position: left top;
+}
+
+
+.container {
+  position: absolute;
+  min-width: 320px;
+  block-size: 380px;
+  box-shadow: 0 0 28px -6px var(--very-dark-des-blue,0.55) ;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.background-top {
+  background-image: url(./images/bg-pattern-card.svg);
+  border-radius: 15px 15px 0 0;
+  block-size: 35%;
+}
+
+.basic-info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  inset-block-start: -50px;
+  block-size: 40%;
+}
+
+.basic-info img{
+  border-radius: 50%;
+  border: 6px solid white;
+}
+
+.basic-info p {
+  margin: 6px 0;
+  display: inline-block;
+}
+
+.name {
+  padding-block-start: 15px;
+  font-weight: 700;
+  font-size: 1.8rem;
+
+}
+
+.age {
+  color: var(--dark-gray-blue);
+  font-weight: normal;
+  font-size: 1.8rem;
+}
+
+.city {
+  color: var(--dark-gray-blue);
+  font-size: 1.4rem;
+}
+
+.social {
+  border-block-start: 1px solid rgb(230, 229, 229);
+  block-size: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social p {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.social p span {
+  font-size: 1rem;
+  color: var(--dark-gray);
+  font-weight: normal;
+  letter-spacing: 1.5px;
+}
+
+.attribution {
+  position: absolute;
+  inset-block-end: 10px;
+  inset-inline-end: 10px;
+  color: rgb(233, 232, 232);
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+}
